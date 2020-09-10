@@ -1,4 +1,4 @@
-from flask import render_template
+from flask import render_template,request,redirect,url_for
 from app import app
 from .request import get_sources, get_articles, search_article
 
@@ -11,7 +11,12 @@ def index():
     # Getting tech news
     news = get_sources('technology')
     title = 'Home- news hub'
-    return render_template('index.html',title = title, sources = sources,sports_sources = sports_sources,technology_sources = technology_sources,entertainment_sources = entertainment_sources)
+    search_article = request.args.get('article_query')
+
+    if search_article:
+        return redirect(url_for('search',article_name=search_article))
+    else:
+        return render_template('index.html',title = title, sources = sources,sports_sources = sports_sources,technology_sources = technology_sources,entertainment_sources = entertainment_sources)
 #dynamic route
 @app.route('/sources/<int:id>')
 def articles(id):
@@ -21,7 +26,7 @@ def articles(id):
     articles = get_articles(id)
     title = f'News-hub || {id}'
     return render_template('news.html',articles = articles, title= title)
-@app.route('/search/<article_name>')
+@app.route('/everything/<article_name>')
 def search(article_name):
     '''
     View function to display the search results
