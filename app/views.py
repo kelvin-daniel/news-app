@@ -13,12 +13,12 @@ def index():
     title = 'Home- news hub'
     return render_template('index.html',title = title, sources = sources,sports_sources = sports_sources,technology_sources = technology_sources,entertainment_sources = entertainment_sources)
 #dynamic route
-@app.route('/news/<int:news_id>')
-def news(news_id):
-
+@app.route('/sources/<int:news_id>')
+def news(id):
     '''
-    View news page function that returns the news details page and its data
+    View articles page function
     '''
-    title = 'News-hub'
-    return render_template('news.html',id = news_id, title= title)
+    articles = get_articles(id)
+    title = f'News-hub || {id}'
+    return render_template('news.html',articles = articles, title= title)
 
