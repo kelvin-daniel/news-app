@@ -7,5 +7,6 @@ def index():
     '''
     function that returns the index page and its data
     '''
-    return render_template('index.html')
+    message = 'Home'
+    return render_template('index.html', message = message)
 
