@@ -16,5 +16,6 @@ def news(news_id):
     '''
     View news page function that returns the news details page and its data
     '''
-    return render_template('news.html',id = news_id)
+    title = 'News-hub'
+    return render_template('news.html',id = news_id, title= title)
 
