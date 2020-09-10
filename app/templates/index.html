@@ -1,16 +1,7 @@
+{% extends 'base.html'%}
 {% import 'macros.html' as macro %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% if value %}
-    <title>{{title}}</title>
-    {% else %}
-    <title>NewsHub- welcome</title>
-    {% endif %}
-</head>
-<body>
+
+{% block content %}
     <div class="container">
         <!-- Tech News Section  -->
         <h3> Technology </h3>
@@ -31,6 +22,5 @@
         <h3> Sports </h3>
         <hr>
         {{ macro.displaySourceList(sports_sources)}}
-</div>
-</body>
-</html>
+    </div>
+{% endblock %}
