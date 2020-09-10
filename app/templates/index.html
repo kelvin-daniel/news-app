@@ -1,3 +1,4 @@
+{% import 'macros.html' as macro %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,12 +11,26 @@
     {% endif %}
 </head>
 <body>
-       <!-- News Sources  -->
-       <h3> Trusted Sources</h3>
-       <ul>
-          {% for news_source in sources %}
-              <li>{{ news_source.title}}</li>
-          {% endfor %}
-      </ul>
+    <div class="container">
+        <!-- Tech News Section  -->
+        <h3> Technology </h3>
+        <hr>
+        {{ macro.displaySourceList(technology_sources)}}
+
+        <!-- Entertainment News Section  -->
+        <h3> Entertainment </h3>
+        <hr>
+        {{ macro.displaySourceList(entertainment_sources)}}
+
+		<!-- Business News Section  -->
+        <h3> Business</h3>
+        <hr>
+        {{ macro.displaySourceList(sources)}}
+
+        <!-- Sports News Section  -->
+        <h3> Sports </h3>
+        <hr>
+        {{ macro.displaySourceList(sports_sources)}}
+</div>
 </body>
 </html>
