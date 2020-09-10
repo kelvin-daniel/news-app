@@ -10,7 +10,7 @@ class NewsTest(unittest.TestCase):
         '''
         Set up method that will run before every Test
         '''
-        self.new_news = News(1234,'Holy SMokes','A must read article','https://url.newsapi.org/v2/sources',8.5,129993)
+        self.new_news = News(1234,'ABC News','description','"http://www.abc.net.au/news"','general','en','au')
     def test_instance(self):
         self.assertTrue(isinstance(self.new_news,News))
 if __name__ == '__main__':
