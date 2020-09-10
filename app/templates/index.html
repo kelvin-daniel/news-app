@@ -10,6 +10,12 @@
     {% endif %}
 </head>
 <body>
-    
+       <!-- News Sources  -->
+       <h3> Trusted Sources</h3>
+       <ul>
+          {% for news_source in sources %}
+              <li>{{ news_source.title}}</li>
+          {% endfor %}
+      </ul>
 </body>
 </html>
