@@ -1,9 +1,10 @@
 from flask import render_template,request,redirect,url_for
-from app import app
+from . import main
 from .request import get_sources, get_articles, search_article
+from ..models import Sources
 
 #views
-@app.route('/')
+@main.route('/')
 def index():
     '''
     function that returns the index page and its data
@@ -18,7 +19,7 @@ def index():
     else:
         return render_template('index.html',title = title, sources = sources,sports_sources = sports_sources,technology_sources = technology_sources,entertainment_sources = entertainment_sources)
 #dynamic route
-@app.route('/sources/<int:id>')
+@main.route('/sources/<int:id>')
 def articles(id):
     '''
     View articles page function
@@ -26,7 +27,7 @@ def articles(id):
     articles = get_articles(id)
     title = f'News-hub || {id}'
     return render_template('news.html',articles = articles, title= title)
-@app.route('/everything/<article_name>')
+@main.route('/everything/<article_name>')
 def search(article_name):
     '''
     View function to display the search results
