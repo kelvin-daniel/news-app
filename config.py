@@ -9,7 +9,7 @@ class Config:
     NEWS_API_KEY = os.environ.get('NEWS_API_KEY')
     @staticmethod
     def init_app(app):
-    pass
+            pass
 class ProdConfig(Config):
     pass
 class DevConfig(Config):
