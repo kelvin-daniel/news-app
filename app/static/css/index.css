@@ -8,10 +8,12 @@ body, html {
     height: 270px;
     padding: 4px;
     font-size: 1.1rem;
-    background-color: #ffffff;
-    
+    background-color: #ffffff;   
 }
-.card-header{
+.art{
+    background-color: #ffe0f7;
+}
+.card-head{
     font-size: 1.2rem;
     text-align: center; 
     color: darkgrey;
