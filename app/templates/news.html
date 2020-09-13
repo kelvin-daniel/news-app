@@ -1,6 +1,6 @@
 {% extends 'base.html'%}
 {% block content%}
-<div class="container">
+<div class="container" style="background-color: #d3dbff;">
     <h2 class="p-2">Headlines</h2><hr>
     {% for article_row in articles | batch(4)%}
         <div class="row">
@@ -14,7 +14,7 @@
                                 <div class="card-body"><p>{{article.description | truncate(60)}}</p></div>
                                 <a href="{{article.url}}" target="_blank" class="btn btn-info btn-sm"> Read More</a>
                             </div>
-                            <div class="footer text-muted text-small">
+                            <div class="footer text-muted font-small">
                             Published : {{article.date}} 
                         </div>
                     </div>
@@ -24,7 +24,7 @@
     {% endfor %}
 </div>
 <!-- Footer -->
-<footer class="page-footer font-small text-white blue bg-dark">
+<footer class="page-footer font-small text-white blue bg-dark mt-5">
     <div class="footer-copyright text-center py-3">© 2020 Copyright:
     <a href="https://github.com/kelvin-daniel?tab=repositories"> newsHUB</a>
     </div>
