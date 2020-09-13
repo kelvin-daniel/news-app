@@ -7,18 +7,34 @@ body, html {
     width: 300px;
     padding: 4px;
     font-size: 1.1rem;
-    border-radius: 5%;
+    background-color: #d3dbff;
 }
-.card-title{
+.card-header{
     font-size: 1.2rem;
     text-align: center; 
     color: darkgrey;
     font-weight: bolder;
+    background-color: #fe91ca;
 }
 .btn{
-    background-color: #fe91ca;
+    background-color: #251f44;
+    font-size: 1.1rem;
+
 }
 
 a{
-    color: darkslategrey;
+    color: rgb(253, 253, 253);
 }
+h3{
+    text-align: center;
+    font-weight: bolder;
+    margin-top: 4%;
+}
+.jumbotron {
+    color: white;
+    background-image: url('{{url_for("static",filename="images/hero.jpg")}}');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+  }
