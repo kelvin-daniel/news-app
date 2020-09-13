@@ -1,5 +1,6 @@
 body, html {
     background-color: #ffe0f7;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .card{
     box-shadow: 7px #030303;
@@ -28,13 +29,20 @@ a{
 h3{
     text-align: center;
     font-weight: bolder;
-    margin-top: 4%;
+    padding: 2%;
+    color: #ffff;
 }
 .jumbotron {
     color: white;
-    background-image: url('{{url_for("static",filename="images/hero.jpg")}}');
+    background-image: url("https://images.unsplash.com/photo-1438109491414-7198515b166b?q=80&fm=jpg&s=cbdabf7a79c087a0b060670a6d79726c");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    height: 30vh;
+  }
+  #tech{
+      background-image: url('https://cdn.pixabay.com/photo/2016/07/03/18/04/tech-1495181_960_720.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
   }
