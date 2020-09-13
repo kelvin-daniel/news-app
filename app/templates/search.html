@@ -4,10 +4,8 @@
 {% block content %}
     <div class="container-fluid">
         <div class="row">
-            <h3> Found {{ articles | count }} matches </h3>
-            <hr>
             <ul>
-                {{ macro.displayArticleList(articles)}}
+                {{ macro.displaySearchList(articles)}}
             </ul>
         </div>
     </div>

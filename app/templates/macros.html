@@ -18,3 +18,29 @@
         </div>
     {% endfor %}
 {% endmacro %}
+
+{%macro displaySearchList(articles)%}
+<div class="container">
+    <h3>Top Headlines Matching your Search</h3>
+    {% for article_row in articles | batch(3)%}
+        <div class="row">
+            {% for article in article_row %}
+                <div class="col-md-3">
+                    <div class="card card-default p-2 m-2">
+                    <a href="{{article.url}}" target="_blank">
+                            <img src="{{article.image}}" alt="{{article.title}}" class="img-fluid" styles="height:300px; width:300px;"></a>
+                            <div class="card-heading">
+                                <h4><a href="{{article.url}}" target="_blank">{{article.title |truncate(35)}}</a></h4>
+                                <div class="card-body"><p>{{article.description | truncate(60)}}</p></div>
+                                <a href="{{article.url}}" target="_blank" class="btn btn-info btn-sm"> Read More</a>
+                            </div>
+                            <div class="footer">
+                            Published : {{article.date}} 
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div> 
+    {% endfor %}
+</div>
+{%endmacro%}
