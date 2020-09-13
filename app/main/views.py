@@ -14,6 +14,7 @@ def index():
     sources = get_sources('business')
     sports_sources = get_sources('sports')
     title = 'Home- news hub'
+    
     search_article = request.args.get('article_query')
 
     if search_article:
