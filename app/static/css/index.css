@@ -1,6 +1,9 @@
 body, html {
     scroll-behavior: smooth;
-    background-color: #ffe0f7;
+    background: #DBE6F6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #C5796D, #DBE6F6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #C5796D, #DBE6F6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .card{
@@ -11,17 +14,17 @@ body, html {
     background-color: #ffffff;   
 }
 .art{
-    background-color: #ffe0f7;
+    background-color: #251f44;
 }
 .card-head{
     font-size: 1.2rem;
     text-align: center; 
     color: darkgrey;
     font-weight: bolder;
-    background-color: #fe91ca;
+    background-color: #056676;
 }
 .btn{
-    background-color: #251f44;
+    background-color: #0f3460;
     font-size: 1.1rem;
 
 }
@@ -39,7 +42,7 @@ h2{
 }
 .jumbotron {
     color: white;
-    background-image: url("https://images.unsplash.com/photo-1438109491414-7198515b166b?q=80&fm=jpg&s=cbdabf7a79c087a0b060670a6d79726c");
+    background-image: url("https://cdn.pixabay.com/photo/2020/01/26/19/32/architecture-4795667__340.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -57,6 +60,7 @@ h2{
     background-position: left;
     background-repeat: no-repeat;
     width: 100%;
+    background-color: #0f3460;
   }
   #bus{
     background-image: url('https://cdn.pixabay.com/photo/2017/09/07/08/54/money-2724241_960_720.jpg');
