@@ -1,6 +1,12 @@
 {% extends 'base.html'%}
 
 {% block content %}
-    <h1>can't find that page</h1>
-    
+    <style>
+        body{
+            background-image: url('{{url_for("static",filename="images/404.gif")}}');
+            background-repeat: no-repeat;
+            background-position-x: center;
+            height: 100vh;
+        }
+    </style>
 {% endblock %}
