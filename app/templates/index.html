@@ -11,34 +11,44 @@
     <section>
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
-            <h1 class="display-4">Fluid jumbotron</h1>
-            <p>This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+                <form class="float-right form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="text" name="article_query" placeholder="Search for an article">
+                    <button value="Submit"  type="submit" class="btn btn-outline-success my-2 my-sm-0">Search</button>
+                </form>
+            <h1 class="display-4">Your News <span class="font-weight-bolder">Companion</span></h1>
             </div>
         </div>
     </section>
     <div class="container">
         <!-- Tech News Section  -->
         <hr>
-        <h3 class="bg-dark"> Technology </h3>
+        <h3 class="bg-dark" id="tech"> Technology </h3>
         <hr>
         {{ macro.displaySourceList(technology_sources)}}
 
         <!-- Entertainment News Section  -->
         <hr>
-        <h3 class="bg-dark"> Entertainment </h3>
+        <h3 class="bg-dark" id="ent"> Entertainment </h3>
         <hr>
         {{ macro.displaySourceList(entertainment_sources)}}
 
         <!-- Business News Section  -->
         <hr>
-        <h3 class="bg-dark"> Business</h3>
+        <h3 class="bg-dark" id="bus"> Business</h3>
         <hr>
         {{ macro.displaySourceList(sources)}}
 
         <!-- Sports News Section  -->
         <hr>
-        <h3 class="bg-dark"> Sports </h3>
+        <h3 class="bg-dark" id="sport"> Sports </h3>
         <hr>
         {{ macro.displaySourceList(sports_sources)}}
     </div>
+
+    <!-- Footer -->
+    <footer class="page-footer font-small text-white blue bg-dark">
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+        <a href="https://github.com/kelvin-daniel?tab=repositories"> newsHUB</a>
+        </div>
+    </footer>
 {% endblock %}
