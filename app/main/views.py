@@ -14,11 +14,11 @@ def index():
     sources = get_sources('business')
     sports_sources = get_sources('sports')
     title = 'Home- news hub'
-    
+
     search_article = request.args.get('article_query')
 
     if search_article:
-        return redirect(url_for('search',article_name=search_article))
+        return redirect(url_for('main.search',article_name=search_article))
     else:
         return render_template('index.html', title = title, technology_sources = technology_sources, entertainment_sources = entertainment_sources, sources = sources, sports_sources = sports_sources)
 #dynamic route

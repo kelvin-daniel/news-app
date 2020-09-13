@@ -95,7 +95,7 @@ def search_article(article_name):
 
         if search_article_response['articles']:
             search_article_list = search_article_response['articles']
-            search_article_results = process_results(search_article_list)
+            search_article_results = process_articles(search_article_list)
 
 
     return search_article_results
