@@ -23,12 +23,12 @@
 
 {%macro displaySearchList(articles)%}
 <div class="container">
-    <h3>Top Headlines Matching your Search</h3>
+    <h3 class="mt-3">Top Headlines Matching your Search</h3><hr>
     {% for article_row in articles | batch(4)%}
         <div class="row">
             {% for article in article_row %}
                 <div class="col w-100">
-                    <div class="card card-default p-2 m-2">
+                    <div class="card card-default p-2 m-3" style="box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 5px 0px, rgba(0, 0, 0, 0.1) 0px 2px 10px 0px;">
                     <a href="{{article.url}}" target="_blank">
                             <img src="{{article.image}}" alt="{{article.title}}" class="img-fluid" styles="height:300px; width:300px;"></a>
                             <div class="card-heading">
