@@ -9,6 +9,7 @@ def index():
     '''
     function that returns the index page and its data
     '''
+    general_sources = get_sources('general')
     technology_sources = get_sources('technology')
     entertainment_sources = get_sources('entertainment')
     sources = get_sources('business')
@@ -20,7 +21,7 @@ def index():
     if search_article:
         return redirect(url_for('main.search',article_name=search_article))
     else:
-        return render_template('index.html', title = title, technology_sources = technology_sources, entertainment_sources = entertainment_sources, sources = sources, sports_sources = sports_sources)
+        return render_template('index.html', title = title, technology_sources = technology_sources, entertainment_sources = entertainment_sources, sources = sources, sports_sources = sports_sources, general_sources= general_sources)
 #dynamic route
 @main.route('/sources/<id>')
 def articles(id):

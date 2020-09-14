@@ -75,3 +75,10 @@ h2{
     background-repeat: no-repeat;
     color: rgb(39, 39, 39);
   }
+  #gen{
+    background-image: url('');
+    background-size: auto;
+    background-position: left;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-color: #0f3460;
