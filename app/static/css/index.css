@@ -76,5 +76,21 @@ h2{
     color: rgb(39, 39, 39);
   }
   #gen{
+    background-image: url('https://cdn.pixabay.com/photo/2020/06/21/04/25/nyc-5323170_960_720.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
     background-color: #0f3460;
   }
+
+  @media screen and (max-width: 480px){
+      .display-4{
+          display: none;
+      }
+      #fomu{
+          align-items: center;
+      }
+
+  }
+

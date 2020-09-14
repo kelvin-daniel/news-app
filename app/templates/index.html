@@ -11,7 +11,7 @@
     <section>
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
-                <form class="float-right form-inline my-2 my-lg-0">
+                <form class="float-right form-inline my-2 my-lg-0" id="fomu">
                     <input class="form-control mr-sm-2" type="text" name="article_query" placeholder="Search for an article">
                     <button value="Submit"  type="submit" class="btn btn-outline-success my-2 my-sm-0">Search</button>
                 </form>
@@ -22,7 +22,7 @@
     <div class="container">
         <!-- General News Section  -->
         <hr>
-        <h2 class="bg-dark" id="gen" style=" background-color: #0f3460;"> General</h3>
+        <h2 class="bg-dark" id="gen" style=" background-color: #0f3460;"> General Sources</h3>
         <hr>
         {{ macro.displaySourceList(general_sources)}}
 
